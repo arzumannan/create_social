@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "533209731682",
+    "project_id": "social-by-mannan",
+    "storage_bucket": "social-by-mannan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533209731682:android:5c2550481185f7c091773b",
+        "android_client_info": {
+          "package_name": "com.example.create_social"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533209731682-a3obl7jp56k73hm4u17sgh40762k7ca1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJnQZbIme7cbn3X4TAHB5BUpUFVaTFUl8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533209731682-a3obl7jp56k73hm4u17sgh40762k7ca1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
