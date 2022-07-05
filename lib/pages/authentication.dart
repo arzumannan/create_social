@@ -1,4 +1,5 @@
 import 'package:create_social/forms/loginform.dart';
+import 'package:create_social/forms/registerform.dart';
 import 'package:flutter/material.dart';
 
 class Authentication extends StatelessWidget {

@@ -1,3 +1,7 @@
+import 'package:create_social/forms/loginform.dart';
+import 'package:create_social/forms/registerform.dart';
+import 'package:create_social/pages/driver.dart';
+import 'package:create_social/pages/home.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:create_social/pages/authentication.dart';
@@ -18,8 +22,8 @@ class SocialApp extends StatelessWidget {
     return MaterialApp(
         title: 'SocialApp',
         theme: ThemeData(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.purple,
         ),
-        home: Authentication());
+        home: const Authentication());
   }
 }
