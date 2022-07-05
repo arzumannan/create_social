@@ -1,16 +1,10 @@
 # create_social
 
-A new Flutter project.
+Arzu Mannan
+Stream of Thoughts: Assignment 1
 
-## Getting Started
+I ran into some obstacles, specifically routing the pages together. 
+Register, login and authentication all work but for some reason when I tried to route the register form to the login form I was running into issue. To see the functionality of the app as it is try logging in with these credentials:
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+email: arzuruhimannan@gmail.com
+pw: password
