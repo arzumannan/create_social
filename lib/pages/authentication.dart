@@ -8,7 +8,7 @@ class Authentication extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Authentication Basics"),
+          title: const Text("Register your Account!"),
         ),
         body: const LoginForm());
   }

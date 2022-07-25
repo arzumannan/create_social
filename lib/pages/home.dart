@@ -1,9 +1,11 @@
 import 'package:create_social/forms/postform.dart';
 import 'package:create_social/model/post.dart';
+import 'package:create_social/pages/conversations.dart';
+import 'package:create_social/pages/driver.dart';
 import 'package:create_social/pages/profile.dart';
 import 'package:create_social/services/firestore_service.dart';
 import 'package:create_social/widgets/loading.dart';
-import 'package:firebase_auth/firebase_auth.dart' as fbAuth;
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -14,21 +16,38 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomeState extends State<HomePage> {
-  final fbAuth.FirebaseAuth _auth = fbAuth.FirebaseAuth.instance;
   final FirestoreService _fs = FirestoreService();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Social Stream"),
+          title: const Text(
+            "Social Stream",
+            style: TextStyle(fontWeight: FontWeight.w700),
+          ),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => ConversationsPage()));
+                },
+                icon: const Icon(Icons.message)),
+            IconButton(
+                onPressed: () async {
+                  await FirebaseAuth.instance.signOut();
+                  Navigator.of(context).pushReplacement(
+                      MaterialPageRoute(builder: (context) => Driver()));
+                },
+                icon: const Icon(Icons.settings))
+          ],
         ),
         floatingActionButton: FloatingActionButton(
           onPressed: _showPostFeild,
           child: const Icon(Icons.post_add),
         ),
         body: StreamBuilder<List<Post>>(
-          stream: _fs.post,
+          stream: _fs.posts,
           builder: (BuildContext context, AsyncSnapshot<List<Post>> snapshots) {
             if (snapshots.hasError) {
               return Center(child: Text(snapshots.error.toString()));
@@ -42,7 +61,7 @@ class _HomeState extends State<HomePage> {
               }
 
               return posts.isEmpty
-                  ? const Center(child: Text("no posts... uh oh"))
+                  ? const Center(child: Text("Aint no POst Biiihhhhhhh"))
                   : ListView.builder(
                       itemCount: posts.length,
                       itemBuilder: (BuildContext context, int index) =>

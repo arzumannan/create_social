@@ -1,9 +1,7 @@
 import 'package:create_social/pages/home.dart';
 import 'package:create_social/style/style.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../widgets/loading.dart';
 
 class LoginForm extends StatefulWidget {
@@ -57,19 +55,19 @@ class _LoginFormState extends State<LoginForm> {
                     return null;
                   },
                 ),
-                OutlinedButton(
+                ElevatedButton(
                     onPressed: () {
                       setState(() {
                         loading = true;
                         login(context);
                       });
                     },
-                    child: const Text("LOGIN")),
-                OutlinedButton(
+                    child: const Text("Login")),
+                ElevatedButton(
                     onPressed: () {
                       forgot();
                     },
-                    child: const Text("Forgot Password"))
+                    child: const Text("Forgot my password"))
               ],
             ),
           );
@@ -88,7 +86,7 @@ class _LoginFormState extends State<LoginForm> {
                 MaterialPageRoute(
                     builder: (BuildContext context) => HomePage()));
           } else {
-            snackBar(context, "User logged in but email is not verified.");
+            snackBar(context, "User needs to verify email.");
             loginResponse.user!.sendEmailVerification();
           }
           loading = false;

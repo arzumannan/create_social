@@ -68,7 +68,7 @@ class _RegisterFormState extends State<RegisterForm> {
           ),
           TextFormField(
             controller: _bio,
-            decoration: inputStyling("Biography"),
+            decoration: inputStyling("Tell us about yourself"),
             validator: (value) {
               if (value == null || value.isEmpty) {
                 return "Password cannot be empty";
@@ -79,7 +79,7 @@ class _RegisterFormState extends State<RegisterForm> {
               return null;
             },
           ),
-          OutlinedButton(
+          ElevatedButton(
               onPressed: () {
                 setState(() {
                   loading = true;

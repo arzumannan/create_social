@@ -28,7 +28,7 @@ class _PostFormState extends State<PostForm> {
             minLines: 5,
             maxLines: 5,
           ),
-          OutlinedButton(
+          ElevatedButton(
               onPressed: _submitPost, child: const Text("Submit Post"))
         ],
       ),
